@@ -103,7 +103,8 @@ if __name__ == "__main__":
     pprint.pprint(cfg)
 
     if not cfg.TRAIN.FLAG:
-        args.manualSeed = 100
+#         args.manualSeed = 100
+        args.manualSeed = random.randint(1, 10000)
     elif args.manualSeed is None:
         args.manualSeed = random.randint(1, 10000)
     random.seed(args.manualSeed)
